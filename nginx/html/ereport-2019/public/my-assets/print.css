@@ -1,0 +1,52 @@
+table {width:100%;margin:5px 0px 5px 0px}
+h1,h2,h3,h4,h5,h6 {font-family: "Nimbus Sans";}
+div,p {font-family:"Nimbus Sans";}
+table tr th {font-family: "Nimbus Sans";}
+table tr td {font-family: "Nimbus Sans";}
+h1,h2,h3,h4,h5 {padding:0 0 0 0;margin:0 0 0 0;line-height:1.4}
+.header tr td {vertical-align:top;}
+.header {
+	border-bottom:4px double #222222;
+	margin-bottom:5px;
+}
+div,p {
+    margin:5px 0px 5px 0px;
+}
+.table_outer_border {border:1px solid #000000;padding:10px}
+
+.table-border {border-collapse: collapse;}
+.table-border tr td {
+	border:1px solid #000000;
+	vertical-align:top;
+}
+.table-border tr .bottom{
+	border:1px solid #000000;
+	vertical-align:top;
+	border-bottom-style: none;
+}
+.table-border tr .bottom-top{
+	border:1px solid #000000;
+	vertical-align:top;
+	border-bottom-style: none;
+	border-top-style: none;
+}
+.table-border tr .top{
+	border:1px solid #000000;
+	vertical-align:top;
+	border-top-style: none;
+}
+
+.table-border tr th {
+	border:1px solid #000000;
+	vertical-align: middle;
+}
+.table-header td {
+	text-align:center;
+	vertical-align:middle;
+	font-weight:bold;
+}
+.table-no-border tr td {
+	border:none;
+	vertical-align:top;
+}
+

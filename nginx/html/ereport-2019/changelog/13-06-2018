@@ -1,0 +1,10 @@
+1. mengubah tabel pengguna
+2. field "view" pada tabel pengguna
+	1 => melihat semua
+	2 => melihat berdasar kode organisasi
+	3 => melihat berdasar pengguna
+	4 => melihat custom / dari aturan tertentu
+3. menentukan kdRekening sebagai PK di tabel kd_akun_prognosis
+4. tambah created_at updated_at tabel master_akun_bas
+5. memastikan rumus prgonosis
+	prognosis = anggaran + tambah_kurang / prognosis = sisa - tambah_kurang

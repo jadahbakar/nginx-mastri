@@ -1,0 +1,45 @@
+//untuk permasalahan queue
+php artisan clear-compiled
+php artisan queue:restart
+
+php artisan queue:work --tries=3 --timeout=0
+
+//update kode organisasi semua transaksi di penerimaan
+UPDATE penerimaan p SET p.kode_organisasi = (SELECT pe.organisasi FROM pengguna pe WHERE pe.`kode_pengguna`= p.kode_pengguna)
+
+
+Jenis transaksi penerimaan yg positif 11,12,13,14
+Jenis transaksi penerimaan yg negatif 15,16,17,18
+Jenis transaksi pengeluaran yg positif 84,85,80,86,58,87
+Jenis transaksi pengeluaran yg negatif 83
+
+Akuntansi itu jenis transaksi 64 jika akun debet kode 5 berarti positif dan jika akun kredit kode 5 negatif
+Akuntansi itu jenia transaksi 64 jika akun debet kode 4 berarti negatif dan jika akun kredit kode 4 berarti positif
+
+//kill supervisor
+sudo pkill supervisord
+
+sudo chmod -R 0755 /usr/share/nginx/html/*
+sudo chmod -R 0755 /var/lib/php
+
+[program:horizon]
+process_name=%(program_name)s
+command=php /usr/share/nginx/html/ereport-2019/artisan horizon
+autostart=true
+autorestart=true
+user=root
+redirect_stderr=true
+stdout_log=/usr/share/nginx/html/log-horizon/horizon.log
+
+netstat -plntu
+
+chcon -R -t httpd_sys_rw_content_t storag
+
+//open redis permission
+sudo /usr/sbin/setsebool httpd_can_network_connect=1 
+sudo  setsebool -P httpd_enable_homedirs 1
+
+//bila error npm install
+sudo yum install gcc
+yum install libpng-devel
+sudo yum install pngquant
